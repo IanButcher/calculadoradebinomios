@@ -33,5 +33,8 @@ btnBotonsito.addEventListener("click", function(){
         const solucion = aInput ** 3 + 3 * aInput** 2 * bInput + 3 * bInput ** 2 * aInput + bInput ** 3;
         solucionTitulo.textContent = `Solución: ${solucion}`;
     }
+    else {
+        alert("No se hacerlo con ese exponente perdon uwu")
+    }
     console.log(solucion)
 });
