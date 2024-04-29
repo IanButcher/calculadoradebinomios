@@ -9,26 +9,42 @@
     
 </head>
 <body>
-    <h1>Calculador de cubo y cuadrado de binomios</h1>
+    <header>
+        <h1 class="titulo">Calculador de cubo y cuadrado de binomios</h1>
+    </header>
     <br>
-    <label for="aNumberInput">Ingrese a</label>
-    <input id="aNumberInput" type="text">
-    <label for="bNumberInput">Ingrese b</label>
-    <input id="bNumberInput" type="text">
-    <label for="exponenteNumberInput">Ingrese exponente</label>
-    <input id="exponenteNumberInput" type="text">
-    <br>
-    <button id="boton">Calcular</button>
-    <br>
-    <h4 id="solucion">Solucion</h4>
-    <br>
-    <h2>Formula Cuadrado</h2>
-    <br>
-    <h4 id="cuadrado">(a+b)<sup>2</sup> = a<sup>2</sup>+ 2ab + b <sup>2</sup> </sup> </h4> 
-    <h2>Formula Cubo</h2>
-    <h4 id="cubo">(a+b) <sup>3</sup> = a<sup>3</sup> + 3a<sup>2</sup>b + 3b<sup>2</sup>a + b<sup>3</sup></h4>
-
-    
+    <div class="container">
+        <div class="insertA">
+            <label for="aNumberInput">Ingrese a</label>
+            <input id="aNumberInput" type="text">
+        </div>
+        <div class="insertB">
+            <label for="bNumberInput">Ingrese b</label>
+            <input id="bNumberInput" type="text">
+        </div>
+        <div class="insertE">
+            <label for="exponenteNumberInput">Ingrese exponente</label>
+            <input id="exponenteNumberInput" type="text">
+        
+        <div>
+        </div id="outer">
+            <div class="button_slide slide_down">
+                <button id="boton">Calcular</button>
+            </div>
+        </div>
+        <div class="solution">
+            <h4 id="solucion">Solucion</h4>
+        </div>
+    </div>
+    <div class="formula">
+        <h2>Formula Cuadrado</h2>
+        
+        <h4 id="cuadrado">(a+b)<sup>2</sup> = a<sup>2</sup>+ 2ab + b <sup>2</sup> </sup> </h4> 
+        
+        <h2>Formula Cubo</h2>
+        <h4 id="cubo">(a+b) <sup>3</sup> = a<sup>3</sup> + 3a<sup>2</sup>b + 3b<sup>2</sup>a + b<sup>3</sup></h4>
+    </div>
+        
     <script src="script.js"></script>
 </body>
 </html>
