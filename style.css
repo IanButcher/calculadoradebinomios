@@ -1,32 +1,75 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+html {
+    margin: 0;
+}
+
 body {
     background: #162944;
+    margin: 0%;
 }
 
 header {
-    text-align: center;
-    
+    font-family: "Lucida Console", Monaco, monospace, bold;
+    color:aliceblue;
+    text-align: center; 
+    padding-bottom: 20px;
+    padding-top: 20px;
+    border-radius: 10px;
+    border: 2px solid #D80286;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 2%;
+    background-color: #D80286;
+    color:#162944;
+    transition: background-color 0.3s ease;
+
 }
 
-.insertA, .insertB, .insertE, .button, .solution, .formula{
+header:hover {
+    background-color: #fcd1eb;
+    color:#D80286;
+}
+
+.insertA, .insertB, .insertE, .solution, .formula{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 8px
+}
+
+.texto {
+    appearance: none;
+	border: none;
+	outline: none;
+	border-bottom: .2em solid #E91E63;
+	background: rgba(#E91E63, .2);
+	border-radius: .2em .2em 0 0;
+	padding: .4em;
+	color: #E91E63;
+    background-color: rgb(241, 221, 233);
+    margin-left: 10px;
+    
+    
 }
 
 .container {
-    font-family: "Kanit", sans-serif;
-    color: rgb(31, 25, 25);
-    background-color: rgb(255, 100, 134);
-    margin-left: 500px;
-    margin-right: 500px;
+    font-family: "Lucida Console", Monaco, monospace;
+    color: rgb(224, 58, 183);
+    margin-left: 30%;
+    margin-right: 30%;
     padding-top: 20px;
     border-radius: 10px;
+    border: 2px solid #D80286;
+}
+
+.container h4 {
+    color: rgb(129, 46, 108);
 }
 
 .button_slide {
     color: #FFF;
+    background-color: #162944;
     border: 2px solid rgb(216, 2, 134);
     border-radius: 0px;
     padding: 18px 36px;
@@ -45,20 +88,52 @@ header {
     box-shadow: inset 0 100px 0 0 #D80286;
   }
   
-  .slide_right:hover {
-    box-shadow: inset 400px 0 0 0 #D80286;
-  }
-  
-  .slide_left:hover {
-    box-shadow: inset 0 0 0 50px #D80286;
-  }
-  
-  .slide_diagonal:hover {
-    box-shadow: inset 400px 50px 0 0 #D80286;
-  }
-  
   #outer {
     width: 364px;
     margin: 50px auto 0 auto;
     text-align: center;
   }
+
+.formcuadrado {
+    font-family: "Lucida Console", Monaco, monospace, bold;
+    color:rgb(231, 37, 118);
+    text-align: center; 
+    padding-bottom: 20px;
+    padding-top: 20px;
+    border-radius: 10px;
+    border-bottom: 4px solid #D80286;
+    margin-left: 30%;
+    margin-right: 6px;
+    margin-top: 2%;
+    background-color: #fcd1eb;
+    width: 265px;
+    height: 180px;
+    transition: background-color 0.3s ease;
+}
+
+.formcuadrado:hover {
+    background-color: #D80286;
+    color:#162944;
+}
+
+.formcubo {
+    font-family: "Lucida Console", Monaco, monospace, bold;
+    color:rgb(231, 37, 118);
+    text-align: center; 
+    padding-bottom: 20px;
+    padding-top: 20px;
+    border-radius: 10px;
+    border-bottom: 4px solid #D80286;
+    margin-right: 30%;
+    margin-left: 3px;
+    margin-top: 2%;
+    background-color: #fcd1eb;
+    width: 265px;
+    height: 180px;
+    transition: background-color 0.3s ease;
+}
+
+.formcubo:hover {
+    background-color: #D80286;
+    color:#162944;
+}
