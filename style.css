@@ -5,8 +5,11 @@ html {
 }
 
 body {
-    background: #162944;
+    /*background: #162944;*/
+    /*background: #122236;*/
+    background: #f7f2f5;
     margin: 0%;
+    padding-bottom: 20px;
 }
 
 header {
@@ -49,7 +52,7 @@ header:hover {
 	color: #E91E63;
     background-color: rgb(241, 221, 233);
     margin-left: 10px;
-    
+
     
 }
 
@@ -136,4 +139,10 @@ header:hover {
 .formcubo:hover {
     background-color: #D80286;
     color:#162944;
+}
+
+.DARKMODE
+{
+    /*body only*/
+    background: #122236;    
 }
