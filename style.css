@@ -1,13 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-html {
-    margin: 0;
+
+
+.container-general {
+    max-width: 800px; 
+    margin: 0 auto; 
+    padding: 20px;
+    background-color: #f8ecf6; 
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(235, 91, 235, 0.363); 
+}
+
+.container-general :not(header):not(div):not(button) {
+    color: inherit;
+    font-size: inherit; 
 }
 
 body {
     /*background: #162944;*/
     /*background: #122236;*/
-    background: #f7f2f5;
+    background: #faf8f9;
     margin: 0%;
     padding-bottom: 20px;
 }
@@ -15,14 +27,16 @@ body {
 header {
     font-family: "Lucida Console", Monaco, monospace, bold;
     color:aliceblue;
+    box-shadow: 0 0 10px rgb(255, 106, 163); 
     text-align: center; 
     padding-bottom: 20px;
     padding-top: 20px;
     border-radius: 10px;
     border: 2px solid #D80286;
-    margin-left: 30%;
-    margin-right: 30%;
     margin-top: 2%;
+    /*margin-left: 10%;
+    margin-right:10%;*/
+    margin: 2% auto;
     background-color: #D80286;
     color:#162944;
     transition: background-color 0.3s ease;
@@ -59,11 +73,15 @@ header:hover {
 .container {
     font-family: "Lucida Console", Monaco, monospace;
     color: rgb(224, 58, 183);
-    margin-left: 30%;
-    margin-right: 30%;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin: 2% auto;
     padding-top: 20px;
+    /*margin-left: 10%;
+    margin-right:10%;*/
     border-radius: 10px;
     border: 2px solid #D80286;
+    box-shadow: 0 0 10px rgba(235, 91, 235, 0.432); 
 }
 
 .container h4 {
@@ -105,13 +123,16 @@ header:hover {
     padding-top: 20px;
     border-radius: 10px;
     border-bottom: 4px solid #D80286;
-    margin-left: 30%;
+    margin-left: 20%;
     margin-right: 6px;
     margin-top: 2%;
+    margin: 2% auto;
     background-color: #fcd1eb;
-    width: 265px;
-    height: 180px;
+    width: 60%;
+    max-width: 400px;
+    height: auto;
     transition: background-color 0.3s ease;
+    box-shadow: 0 0 10px rgba(235, 91, 235, 0.363); 
 }
 
 .formcuadrado:hover {
@@ -127,13 +148,16 @@ header:hover {
     padding-top: 20px;
     border-radius: 10px;
     border-bottom: 4px solid #D80286;
-    margin-right: 30%;
+    margin-right: 20%;
     margin-left: 3px;
     margin-top: 2%;
+    margin: 2% auto;
     background-color: #fcd1eb;
-    width: 265px;
-    height: 180px;
+    width: 60%;
+    max-width: 400px;
+    height: auto;
     transition: background-color 0.3s ease;
+    box-shadow: 0 0 10px rgba(235, 91, 235, 0.363); 
 }
 
 .formcubo:hover {
@@ -145,4 +169,13 @@ header:hover {
 {
     /*body only*/
     background: #122236;    
+}
+@media screen and (max-width: 600px) {
+    .container-general {
+        padding: 10px;
+    }
+    header, .container, .formcuadrado, .formcubo {
+        width: 90%;
+        max-width: none;
+    }
 }
