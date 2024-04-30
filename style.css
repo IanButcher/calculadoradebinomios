@@ -194,4 +194,8 @@ header:hover {
         width: 90%;
         max-width: none;
     }
+    .insertE {
+        margin-left: 20px;
+        margin-right: 25px;
+    }
 }
