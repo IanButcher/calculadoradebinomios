@@ -10,6 +10,11 @@
 </head>
 <body>
 
+    <label class="switch">
+        <input type="checkbox" id="darkModeCheckbox">
+        <span class="slider"></span>
+    </label>
+
     <div class="container-general">
         <header>
             <p class="titulo">Calculador de cubo y cuadrado de binomios</p>
@@ -61,25 +66,34 @@
     <br>
     <br>
     <br>
-    <div class="container-general">
-        <div class="container">
-            <div class="formcuadrado">
-                <h2>Cuadrados Hechos</h2>
-                <div class="cuadradosHechos">
+    <div class="box">
+        <a class="button" href="#popup1">Historial</a>
+    </div>
+    
+    <div id="popup1" class="overlay">
+        <div class="popup">
+            <a class="close" href="#">&times;</a>
+            <div class="container-general">
+                <div class="container">
+                    <div class="formcuadrado">
+                        <h2>Cuadrados Hechos</h2>
+                        <div class="cuadradosHechos">
 
-                </div>
+                        </div>
+                    </div>
+                
+                    <div class="formcubo">
+                        <h2>Cubos Hechos</h2>
+                        <div class="cubosHechos">
+
+                        </div>
+                    </div>     
+                </div> 
             </div>
-        
-            <div class="formcubo">
-                <h2>Cubos Hechos</h2>
-                <div class="cubosHechos">
-
-                </div>
-            </div>     
-        </div> 
+        </div>
     </div>
 
-    <button id="darkMode">Darkmode</button>
+      
         
     <script src="script.js"></script>
 </body>

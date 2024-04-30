@@ -58,16 +58,18 @@ btnBotonsito.addEventListener("click", ()=>{
 // DarkMode btn
 const darkModeBtn = document.querySelector('#darkMode')
 const allDivs = document.querySelectorAll("div")
+const darkModeCheckbox = document.getElementById("darkModeCheckbox");
 
-
-darkModeBtn.addEventListener("click", ()=>{
-    document.body.classList.toggle('DARKMODE')
-    for (const div of allDivs) {
-        //if (div.classList.contains === "ignoreDiv"){
-        //     console.log("Ignoramos este div XD no encontre una forma mejor")
-        //}
-        //else{
-        div.classList.toggle('DARKMODE')
-        //}
-    } 
-})
+darkModeCheckbox.addEventListener("change", () => {
+    if (darkModeCheckbox.checked) {
+        document.body.classList.add('DARKMODE');
+        for (const div of allDivs) {
+            div.classList.add('DARKMODE');
+        }
+    } else {
+        document.body.classList.remove('DARKMODE');
+        for (const div of allDivs) {
+            div.classList.remove('DARKMODE');
+        }
+    }
+});

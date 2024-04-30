@@ -198,4 +198,145 @@ header:hover {
         margin-left: 20px;
         margin-right: 25px;
     }
+    .switch {
+        transform: translateY(-20px);
+    }
+    .box {
+        margin-left: 0% auto;
+      }
+      .popup{
+        width: 200px;
+      }
+}
+
+  
+  .button {
+    margin-left: 19%;
+    background-color: #f8ecf6; 
+    padding: 90px;
+    border-radius: 10px;
+    background-clip: padding-box;
+    text-align: center;
+    font-size: 1em;
+    padding: 10px;
+    color:#162944;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    font-family: "Lucida Console", Monaco, monospace, bold;
+    box-shadow: 0 0 3px rgba(252, 222, 233, 0.582); 
+    padding-left: 28%;
+    padding-right: 27.5%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+  }
+  .button:hover {
+    background-color: #D80286;
+    box-shadow: 0 0 15px rgb(250, 87, 150); 
+    color: #f8ecf6;
+
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(400px);
+  }
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: #17151aa4;
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
+    transition: all 5s ease-in-out;
+    
+  }
+  
+  .popup h2 {
+    margin-top: 0;
+    color: #333;
+    font-family: "Lucida Console", Monaco, monospace, bold;
+  }
+  .popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+  }
+  .popup .close:hover {
+    color: #E91E63;
+  }
+  .popup .content {
+    max-height: 30%;
+    overflow: auto;
+  }
+
+
+  /* The switch - the box around the slider */
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+  margin-left: 90%;
+  transform: translateY(35px);
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background: #f783e7;
+  border-radius: 50px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2em;
+  width: 2em;
+  inset: 0;
+  background-color: white;
+  border-radius: 50px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.switch input:checked + .slider {
+  background: #191627;
+}
+
+
+.switch input:checked + .slider:before {
+  transform: translateX(1.6em);
 }
