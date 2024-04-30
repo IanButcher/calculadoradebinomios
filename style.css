@@ -8,7 +8,7 @@
     padding: 20px;
     background-color: #f8ecf6; 
     border-radius: 10px; 
-    box-shadow: 0 0 10px rgba(235, 91, 235, 0.363); 
+    box-shadow: 0 0 30px rgba(247, 52, 198, 0.692); 
 }
 
 .container-general :not(header):not(div):not(button) {
@@ -19,15 +19,16 @@
 body {
     /*background: #162944;*/
     /*background: #122236;*/
-    background: #faf8f9;
+    background: #fcf9fb;
     margin: 0%;
     padding-bottom: 20px;
+    margin-top: 60px;
 }
 
 header {
     font-family: "Lucida Console", Monaco, monospace, bold;
     color:aliceblue;
-    box-shadow: 0 0 10px rgb(255, 106, 163); 
+    box-shadow: 0 0 15px rgb(250, 87, 150); 
     text-align: center; 
     padding-bottom: 20px;
     padding-top: 20px;
@@ -81,7 +82,7 @@ header:hover {
     margin-right:10%;*/
     border-radius: 10px;
     border: 2px solid #D80286;
-    box-shadow: 0 0 10px rgba(235, 91, 235, 0.432); 
+    box-shadow: 0 0 20px rgba(235, 91, 235, 0.63); 
 }
 
 .container h4 {
