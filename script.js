@@ -73,3 +73,39 @@ darkModeCheckbox.addEventListener("change", () => {
         }
     }
 });
+
+const popup = document.getElementById('popup1');
+let isDragging = false;
+let offsetX, offsetY;
+
+popup.addEventListener("mousedown", startDragging);
+
+function startDragging(e) {
+    isDragging = true;
+    const rect = popup.getBoundingClientRect();
+    offsetX = e.clientX - rect.left;
+    offsetY = e.clientY - rect.top;
+    
+    document.addEventListener("mousemove", drag);
+    document.addEventListener("mouseup", stopDragging);
+}
+
+function stopDragging() {
+    isDragging = false;
+    document.removeEventListener("mousemove", drag);
+    document.removeEventListener("mouseup", stopDragging);
+}
+
+function drag(e) {
+    if (isDragging) {
+        const x = e.clientX - offsetX;
+        const y = e.clientY - offsetY;
+        
+        popup.style.left = `${x}px`;
+        popup.style.top = `${y}px`;
+    }
+}
+
+popup.ondragstart = function() {
+    return false;
+  };

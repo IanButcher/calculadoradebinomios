@@ -248,10 +248,12 @@ header:hover {
     visibility: hidden;
     opacity: 0;
     transform: translateY(400px);
+    height: 0px;
   }
   .overlay:target {
     visibility: visible;
     opacity: 1;
+    cursor: move;
   }
   
   .popup {
@@ -298,6 +300,8 @@ header:hover {
   height: 1.5em;
   margin-left: 90%;
   transform: translateY(35px);
+  box-shadow: 0 0 30px rgba(247, 52, 198, 0.822); 
+
 }
 
 /* Hide default HTML checkbox */
