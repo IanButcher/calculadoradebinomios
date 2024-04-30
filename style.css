@@ -184,7 +184,10 @@ header:hover {
 .DARKMODE
 {
     /*body only*/
-    background: #122236;    
+    
+    background-color: #122236;  
+    
+    
 }
 @media screen and (max-width: 600px) {
     .container-general {
@@ -253,7 +256,6 @@ header:hover {
   .overlay:target {
     visibility: visible;
     opacity: 1;
-    cursor: move;
   }
   
   .popup {
@@ -298,10 +300,11 @@ header:hover {
   display: inline-block;
   width: 3em;
   height: 1.5em;
+  border-radius: 50px;
   margin-left: 90%;
   transform: translateY(35px);
   box-shadow: 0 0 30px rgba(247, 52, 198, 0.822); 
-
+  
 }
 
 /* Hide default HTML checkbox */

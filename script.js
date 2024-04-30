@@ -81,10 +81,10 @@ let offsetX, offsetY;
 popup.addEventListener("mousedown", startDragging);
 
 function startDragging(e) {
-    isDragging = true;
     const rect = popup.getBoundingClientRect();
     offsetX = e.clientX - rect.left;
     offsetY = e.clientY - rect.top;
+    isDragging = true;
     
     document.addEventListener("mousemove", drag);
     document.addEventListener("mouseup", stopDragging);
@@ -101,10 +101,15 @@ function drag(e) {
         const x = e.clientX - offsetX;
         const y = e.clientY - offsetY;
         
-        popup.style.left = `${x}px`;
-        popup.style.top = `${y}px`;
+        // Ajustar la posición para que el cursor esté en el centro del popup
+        const popupWidth = popup.offsetWidth;
+        const popupHeight = popup.offsetHeight;
+        
+        popup.style.left = `${x - popupWidth / 2}px`;
+        popup.style.top = `${y - popupHeight / 2}px`;
     }
 }
+
 
 popup.ondragstart = function() {
     return false;
