@@ -8,6 +8,16 @@
     background-color: #f8ecf6; 
     border-radius: 10px; 
     box-shadow: 0 0 30px rgba(247, 52, 198, 0.692); 
+    animation: shadowChange 2s infinite alternate;
+}
+
+@keyframes shadowChange {
+    0% {
+        box-shadow: 0 0 42px rgba(196, 50, 159, 0.712); 
+    }
+    100% {
+        box-shadow: 0 0 60px rgba(240, 42, 174, 0.9); 
+    }
 }
 
 .container-general :not(header):not(div):not(button) {
