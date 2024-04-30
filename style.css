@@ -294,8 +294,8 @@ header:hover {
   font-size: 17px;
   position: relative;
   display: inline-block;
-  width: 3.5em;
-  height: 2em;
+  width: 3em;
+  height: 1.5em;
   margin-left: 90%;
   transform: translateY(35px);
 }
@@ -323,8 +323,8 @@ header:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 2em;
-  width: 2em;
+  height: 1.5em;
+  width: 1.5em;
   inset: 0;
   background-color: white;
   border-radius: 50px;
