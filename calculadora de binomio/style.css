@@ -222,6 +222,11 @@ header:hover {
   transform: translateX(1.6em);
 }
 
+.animacionBlanca{
+    transition: ease-in 0.2s;
+    background-color: #FFF;
+}
+
 @media screen and (max-width: 600px) {
     .container-general {
         padding: 10px;
@@ -247,3 +252,5 @@ header:hover {
         margin-right: 50px;
     }
 }
+
+
