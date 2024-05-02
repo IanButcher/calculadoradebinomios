@@ -72,45 +72,4 @@ darkModeCheckbox.addEventListener("change", () => {
             div.classList.remove('DARKMODE');
         }
     }
-});
-
-const popup = document.getElementById('popup1');
-let isDragging = false;
-let offsetX, offsetY;
-
-popup.addEventListener("mousedown", startDragging);
-
-function startDragging(e) {
-    const rect = popup.getBoundingClientRect();
-    offsetX = e.clientX - rect.left;
-    offsetY = e.clientY - rect.top;
-    isDragging = true;
-    
-    document.addEventListener("mousemove", drag);
-    document.addEventListener("mouseup", stopDragging);
-}
-
-function stopDragging() {
-    isDragging = false;
-    document.removeEventListener("mousemove", drag);
-    document.removeEventListener("mouseup", stopDragging);
-}
-
-function drag(e) {
-    if (isDragging) {
-        const x = e.clientX - offsetX;
-        const y = e.clientY - offsetY;
-        
-        // Ajustar la posición para que el cursor esté en el centro del popup
-        const popupWidth = popup.offsetWidth;
-        const popupHeight = popup.offsetHeight;
-        
-        popup.style.left = `${x - popupWidth / 2}px`;
-        popup.style.top = `${y - popupHeight / 2}px`;
-    }
-}
-
-
-popup.ondragstart = function() {
-    return false;
-  };
+})
