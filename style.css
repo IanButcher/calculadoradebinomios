@@ -131,7 +131,7 @@ header:hover {
     text-align: center;
   }
 
-.formcuadrado {
+  .formcuadrado, .formcubo {
     font-family: "Lucida Console", Monaco, monospace, bold;
     color:rgb(231, 37, 118);
     text-align: center; 
@@ -147,69 +147,17 @@ header:hover {
     width: 60%;
     max-width: 400px;
     height: auto;
-    transition: background-color 0.3s ease;
     box-shadow: 0 0 10px rgba(235, 91, 235, 0.363); 
+    transition: box-shadow 0.3s ease; /* Transición para la sombra */
 }
 
-.formcuadrado:hover {
+.formcuadrado:hover, .formcubo:hover {
     background-color: #D80286;
     color:#162944;
 }
 
-.formcubo {
-    font-family: "Lucida Console", Monaco, monospace, bold;
-    color:rgb(231, 37, 118);
-    text-align: center; 
-    padding-bottom: 20px;
-    padding-top: 20px;
-    border-radius: 10px;
-    border-bottom: 4px solid #D80286;
-    margin-right: 20%;
-    margin-left: 3px;
-    margin-top: 2%;
-    margin: 2% auto;
-    background-color: #fcd1eb;
-    width: 60%;
-    max-width: 400px;
-    height: auto;
-    transition: background-color 0.3s ease;
-    box-shadow: 0 0 10px rgba(235, 91, 235, 0.363); 
-}
-
-.formcubo:hover {
-    background-color: #D80286;
-    color:#162944;
-}
-
-.DARKMODE
-{
-    /*body only*/
-    
-    background-color: #122236;  
-    
-    
-}
-@media screen and (max-width: 600px) {
-    .container-general {
-        padding: 10px;
-    }
-    header, .container, .formcuadrado, .formcubo {
-        width: 90%;
-        max-width: none;
-    }
-    .insertE {
-        margin-left: 20px;
-        margin-right: 25px;
-    }
-    .switch {
-        transform: translateY(-20px);
-    }
-    .box {
-        margin-left: 0% auto;
-      }
-      .popup{
-        width: 200px;
-      }
+.DARKMODE .formcuadrado, .DARKMODE .formcubo, .DARKMODE .container-general, .DARKMODE .container {
+    background-color: #122236; /* Cambio de color de fondo en modo oscuro */
 }
 
   
@@ -346,4 +294,35 @@ header:hover {
 
 .switch input:checked + .slider:before {
   transform: translateX(1.6em);
+}
+
+@media screen and (max-width: 600px) {
+    .container-general {
+        padding: 10px;
+    }
+    header, .container, .formcuadrado, .formcubo {
+        width: 90%;
+        max-width: none;
+    }
+    .insertE {
+        margin-left: 22px;
+        margin-right: 21px;
+    }
+
+    .container label {
+        font-size: 10px;
+    }
+    .switch {
+        transform: translateY(-20px);
+    }
+    .box {
+        margin-left: 0% auto;
+      }
+      .popup{
+        width: 200px;
+      }
+}
+
+.blanco{
+    color: white;
 }
