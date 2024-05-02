@@ -148,7 +148,7 @@ header:hover {
     max-width: 400px;
     height: auto;
     box-shadow: 0 0 10px rgba(235, 91, 235, 0.363); 
-    transition: box-shadow 0.3s ease; /* Transición para la sombra */
+    transition: 0.3s ease; /* Transición para la sombra */
 }
 
 .formcuadrado:hover, .formcubo:hover {
@@ -157,7 +157,13 @@ header:hover {
 }
 
 .DARKMODE .formcuadrado, .DARKMODE .formcubo, .DARKMODE .container-general, .DARKMODE .container {
+    transition: ease-in 0.5s;
     background-color: #122236; /* Cambio de color de fondo en modo oscuro */
+}
+
+.DARKMODE .formcuadrado:hover, .formcubo:hover {
+    background-color: #D80286;
+    color:#162944;
 }
 
   
@@ -288,7 +294,7 @@ header:hover {
 }
 
 .switch input:checked + .slider {
-  background: #191627;
+  background: #1e1a30;
 }
 
 
