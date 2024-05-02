@@ -1,0 +1,123 @@
+body {
+    /*background: #162944;*/
+    /*background: #122236;*/
+    /*background: #fcf9fb;*/
+    background: radial-gradient(#290e36,#0f0b1f ) ;
+    margin: 0%;
+    padding-bottom: 20px;
+    margin-top: 10px;
+    transform: scale(0.9);
+
+}
+
+.container-general {
+    max-width: 800px; 
+    margin: 0 auto; 
+    padding: 20px;
+    background-color: #f8ecf6; 
+    border-radius: 10px; 
+    box-shadow: 0 0 30px rgba(247, 52, 198, 0.692); 
+    animation: shadowChange 2s infinite alternate;
+}
+
+@keyframes shadowChange {
+    0% {
+        box-shadow: 0 0 42px rgba(196, 50, 159, 0.712); 
+    }
+    100% {
+        box-shadow: 0 0 60px rgba(240, 42, 174, 0.9); 
+    }
+}
+
+.container-general :not(header):not(div):not(button) {
+    color: inherit;
+    font-size: inherit; 
+}
+
+header {
+    font-family: "Lucida Console", Monaco, monospace, bold;
+    color:aliceblue;
+    box-shadow: 0 0 15px rgb(250, 87, 150); 
+    text-align: center; 
+    padding-bottom: 20px;
+    padding-top: 20px;
+    border-radius: 10px;
+    border: 2px solid #D80286;
+    margin-top: 2%;
+    /*margin-left: 10%;
+    margin-right:10%;*/
+    margin: 2% auto;
+    background-color: #D80286;
+    color:#162944;
+    transition: background-color 0.3s ease;
+
+}
+
+
+.container {
+    font-family: "Lucida Console", Monaco, monospace;
+    color: rgb(224, 58, 183);
+    margin-left: 20%;
+    margin-right: 20%;
+    margin: 2% auto;
+    padding-top: 20px;
+    /*margin-left: 10%;
+    margin-right:10%;*/
+    border-radius: 10px;
+    border: 2px solid #D80286;
+    box-shadow: 0 0 20px rgba(235, 91, 235, 0.63); 
+    padding-bottom: 20px;
+}
+
+.container h4 {
+    color: rgb(129, 46, 108);
+}
+
+.button_slide {
+    color: #FFF;
+    background-color: #162944;
+    border: 2px solid rgb(216, 2, 134);
+    border-radius: 0px;
+    padding: 18px 36px;
+    display: inline-block;
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 14px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 0 #D80286;
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.5s;
+  }
+  
+.slide_down:hover {
+    box-shadow: inset 0 100px 0 0 #D80286;
+  }
+  
+#outer {
+    width: 364px;
+    margin: 50px auto 0 auto;
+    text-align: center;
+  }
+  .insert {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8px
+}
+
+.texto {
+    appearance: none;
+	border: none;
+	outline: none;
+	border-bottom: .2em solid #E91E63;
+	background: rgba(#E91E63, .2);
+	border-radius: .2em .2em 0 0;
+	padding: .4em;
+	color: #E91E63;
+    background-color: rgb(248, 208, 233);
+    margin-left: 10px;
+
+}
+
+

@@ -154,6 +154,7 @@ header:hover {
 .formcuadrado:hover, .formcubo:hover {
     background-color: #D80286;
     color:#162944;
+    box-shadow: 0 0 55px rgb(247, 50, 93); 
 }
 
 .DARKMODE .formcuadrado, .DARKMODE .formcubo, .DARKMODE .container-general, .DARKMODE .container {

@@ -7,14 +7,24 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h4>titulo increible</h4>
-
-    <label for="exponente">Inserte el exponente del número imaginario: </label>
-    <input type="number" id="exponente">
-    <button onclick="calcular()">Calcular</button>
-
-    <div id="resultado"></div>
-    
+    <div class="container-general">
+        <header>
+            <h4>Calculadora de números imaginarios</h4>
+        </header>
+        <div class="container">
+            <div class="insert">
+                <label for="exponente">Inserte el exponente del número imaginario: </label>
+                <br>
+                <input type="number" id="exponente" class="texto">
+            </div>
+            <div id="outer">
+                <button onclick="calcular()" id="boton" class="button_slide slide_down">Calcular</button>
+            </div>
+        </div>
+        <div class="solution">
+            <h4 id="resultado">Solución</h4>
+        </div>
+    </div>
     <script src="script.js"></script>
 
 </body>
