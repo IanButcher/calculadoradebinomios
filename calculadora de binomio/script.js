@@ -1,105 +1,65 @@
-// Variables
-const cuadradoFormula = document.querySelector('#cuadrado')
-const cuboFormula = document.querySelector('#cubo')
-const solucionTitulo = document.querySelector('#solucion')
-const btnBotonsito = document.querySelector('#boton')
-const cuadradosHechos = document.querySelector('.cuadradosHechos')
-const cubosHechos = document.querySelector('.cubosHechos')
-const aInput = document.querySelector('#aNumberInput')
-const bInput = document.querySelector('#bNumberInput')
-const exponenteInput = document.getElementById('exponenteNumberInput')
+document.addEventListener('DOMContentLoaded', function() {
+    
+    const boton = document.querySelector('#boton')
+    const parrafo = document.querySelector('#resultado')
 
-// Event listeners for Enter key press
-aInput.addEventListener("keydown", function(event) {
-    if (event.key === "Enter") {
-        event.preventDefault();
-        bInput.focus();
+    // Calcular 
+    boton.addEventListener("click", () => {
+        event.preventDefault()
+        const expresion = document.querySelector('#operaciones').value
+        try {
+            const resultado = evaluarExpresion(expresion)
+            parrafo.innerHTML = `El resultado es: ${resultado}`
+            console.log(resultado)
+        } catch (error) {
+            parrafo.textContent = "Error al evaluar la expresión. Por favor, verifica la entrada."
+        }
+    })
+
+    function evaluarExpresion(expresion) {
+        expresion = expresion.replace(/i/g, Math.sqrt(-1))
+        
+        expresion = expresion.replace(/√\(([^)]+)\)/g, (match, contenido) => {
+            return Math.sqrt(parseFloat(contenido))
+        })
+        console.log('Expresión:', expresion)
+        const resultado = math.evaluate(expresion)
+        return resultado
     }
-});
 
-bInput.addEventListener("keydown", function(event) {
-    if (event.key === "Enter") {
-        event.preventDefault();
-        exponenteInput.focus();
+    const btnSection = document.querySelector('.meterBotone')
+    const expresion = document.querySelector('#operaciones')
+
+    const botonesArr = ['i', 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, '+', '-', '*', '/', '**', '(', ')', '√']
+
+    for (let boton of botonesArr) {
+        let createdBtn = document.createElement("button")
+        createdBtn.innerHTML = boton
+
+        createdBtn.addEventListener("click", () => {
+            if (boton === 'i') {
+                expresion.value += 'i' 
+            } else if (boton === '√') {
+                expresion.value += '√()' 
+            } else {
+                expresion.value += boton 
+            }
+        })
+
+        btnSection.appendChild(createdBtn)
     }
-});
 
-exponenteInput.addEventListener("keydown", function(event) {
-    if (event.key === "Enter") {
-        event.preventDefault();
-        btnBotonsito.click(); // Trigger the button click event
-    }
-});
-
-// Solve
-btnBotonsito.addEventListener("click", ()=>{
-    // Retrieve input values
-    const a = parseFloat(aInput.value)
-    const b = parseFloat(bInput.value)
-    const exponente = parseInt(exponenteInput.value)
-
-    // Handling NaN bugs
-    const allInputs = [aInput, bInput, exponenteInput]
-    for (const input of allInputs){
-        if(!input.value){
-            alert("El valor de A y/o B no puede ser nulo o cadena de caracteres. Por favor, ingrese un numero")
-            return
+    function handleKeyDown(event) {
+        const teclaPresionada = event.key
+        if (botonesArr.includes(teclaPresionada)) {
+            const botonCorrespondiente = document.querySelector(`button[value="${teclaPresionada}"]`)
+            if (botonCorrespondiente) {
+                botonCorrespondiente.click() 
+            }
         }
     }
 
-    // Type of exponente
-    if (exponente === 2) {
-        // Modifying formula
-        const cuadrado = `(${a} + ${b}) <sup>2</sup> = ${a}<sup>2</sup> + 2(${a})(${b}) + ${b} <sup>2</sup>`
-        cuadradoFormula.innerHTML = cuadrado
+    document.addEventListener('keydown', handleKeyDown)
 
-        // Solving operation
-        const solucion = a ** 2 + 2 * a * b + b ** 2
-        solucionTitulo.textContent = `Solución: ${solucion}`
-
-        // Adding it to cuadradosHechos
-        const cuadradoResult = `<h4>${cuadrado}</h4> = ${solucion}`
-        cuadradosHechos.insertAdjacentHTML('beforeend', cuadradoResult)
-    } 
-    else if (exponente === 3) {
-        // Modifying formula
-        const cubo = `(${a} + ${b})<sup>3</sup> = ${a}<sup>3</sup> + 3(${a})<sup>2</sup>(${b}) + 3(${b})<sup>2</sup>(${a}) + ${b}<sup>3</sup>`
-        cuboFormula.innerHTML = cubo
-
-        // Solving operation
-        const solucion = a ** 3 + 3 * a** 2 * b + 3 * b ** 2 * a + b ** 3
-        solucionTitulo.textContent = `Solución: ${solucion}`
-
-        // Adding it to cubosHechos
-        const cuboResult = `<h4>${cubo}</h4> = ${solucion}`
-        cubosHechos.insertAdjacentHTML('beforeend', cuboResult)
-    } else {
-        alert("No se hacerlo con ese exponente perdon uwu")
-    }        
-});
-
-// DarkMode btn
-const darkModeBtn = document.querySelector('#darkMode')
-const allDivs = document.querySelectorAll("div")
-const darkModeCheckbox = document.getElementById("darkModeCheckbox");
-const todoLoh4 = document.querySelectorAll('h4')
-
-darkModeCheckbox.addEventListener("change", () => {
-    if (darkModeCheckbox.checked) {
-        document.body.classList.add('DARKMODE')
-        for (inputado of todoLoh4){
-            inputado.classList.add('blanco')
-        }
-        for (const div of allDivs) {
-            div.classList.add('DARKMODE')
-        }
-    } else {
-        document.body.classList.remove('DARKMODE')
-        for (rocas of todoLoh4){
-            rocas.classList.remove('blanco')
-        }
-        for (const div of allDivs) {
-            div.classList.remove('DARKMODE')
-        }
-    }
 })
+
