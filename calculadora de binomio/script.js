@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Calcular 
     boton.addEventListener("click", () => {
-        event.preventDefault()
         const expresion = document.querySelector('#operaciones').value
         try {
             const resultado = evaluarExpresion(expresion)
